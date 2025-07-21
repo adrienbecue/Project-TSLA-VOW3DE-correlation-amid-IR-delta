@@ -1,2 +1,19 @@
 # Project-TSLA-VOW3DE-correlation-amid-IR-delta
 This study investigates the correlation between Tesla and Volkswagen stock performance and interest rate changes, using econometric tools such as ACF, CAPM, FF3FM, and OLS regression to assess volatility, risk exposure, and sensitivity to macroeconomic factors.
+
+
+This Python script performs a comprehensive financial analysis of Tesla (TSLA) and Volkswagen (VOW3.DE) stock performance from 2011 to 2024, with a particular focus on their sensitivity to interest rate changes and macroeconomic variables.
+
+The analysis begins with the import and cleaning of historical daily stock prices from Yahoo! Finance. Simple and log returns are computed to evaluate volatility and distribution characteristics, highlighting Tesla’s significantly higher return variability compared to Volkswagen. Visualizations and statistical summaries confirm that while both stocks show returns centered around zero, Tesla’s wider spread reflects greater risk and speculative dynamics.
+
+Autocorrelation analysis is performed on log returns and squared log returns. Although raw returns show little to no autocorrelation—consistent with the Efficient Market Hypothesis—squared log returns exhibit strong autocorrelation for both stocks, indicating volatility clustering, especially for Tesla.
+
+To evaluate systematic market risk, the Capital Asset Pricing Model (CAPM) is applied. The results show that Volkswagen has a beta of 0.77, suggesting lower sensitivity to market fluctuations, while Tesla has a beta of 1.53, confirming its high exposure to market volatility. The Fama-French Three-Factor Model adds further insight: Volkswagen is positively aligned with value stocks (HML = +0.48) and only slightly exposed to small-cap effects (SMB = +0.19), whereas Tesla is negatively aligned with value (HML = –0.72) and significantly influenced by small-cap dynamics (SMB = +0.68).
+
+The core focus of the study lies in examining the relationship between stock performance and interest rate fluctuations. Using OLS regression, we find that Tesla’s stock price reacts positively to the U.S. 10-Year Treasury Yield, with a coefficient of +23.07 (p = 0.067), suggesting that market optimism may outweigh valuation concerns during periods of rising rates. In contrast, Volkswagen’s stock is negatively impacted by the German 10-Year Bund Yield, showing a coefficient of –3.68 (p = 0.056), reflecting increased financing costs and investor rotation away from equities.
+
+Adding WTI crude oil prices into the regression improves explanatory power for Volkswagen. The Bund Yield becomes even more significant (–9.27, p = 0.000), while oil prices exert a positive influence (+0.41, p = 0.001)—indicating that Volkswagen's performance is partially linked to energy market trends. For Tesla, however, neither interest rates nor oil prices are statistically significant in the extended model, underscoring its electric vehicle model’s insulation from traditional macroeconomic drivers like fuel costs.
+
+Finally, the script computes key risk and performance indicators. Tesla shows a Sharpe Ratio of 60.74 and a Sortino Ratio of 86.13, suggesting superior risk-adjusted returns despite higher volatility and larger drawdowns. Volkswagen, while more stable, delivers lower and even negative risk-adjusted returns, consistent with a value-oriented, less speculative profile.
+
+In summary, this analysis highlights the contrasting behaviors of Tesla and Volkswagen in the face of macroeconomic shifts. Tesla’s growth-driven nature makes it more volatile but also more resilient to rate hikes under favorable sentiment, while Volkswagen’s traditional structure makes it more sensitive to tightening financial conditions. These findings are particularly relevant for investors managing sector exposure and interest rate risk in their portfolios.
