@@ -6,7 +6,7 @@ This Python script performs a comprehensive financial analysis of Tesla (TSLA) a
 
 The analysis begins with the import and cleaning of historical daily stock prices from Yahoo! Finance. Simple and log returns are computed to evaluate volatility and distribution characteristics, highlighting Tesla’s significantly higher return variability compared to Volkswagen. Visualizations and statistical summaries confirm that while both stocks show returns centered around zero, Tesla’s wider spread reflects greater risk and speculative dynamics.
 
-Autocorrelation analysis is performed on log returns and squared log returns. Although raw returns show little to no autocorrelation—consistent with the Efficient Market Hypothesis—squared log returns exhibit strong autocorrelation for both stocks, indicating volatility clustering, especially for Tesla.
+Autocorrelation analysis is performed on log returns and squared log returns. Although raw returns show little to no autocorrelation, squared log returns exhibit strong autocorrelation for both stocks, indicating volatility clustering, especially for Tesla.
 
 To evaluate systematic market risk, the Capital Asset Pricing Model (CAPM) is applied. The results show that Volkswagen has a beta of 0.77, suggesting lower sensitivity to market fluctuations, while Tesla has a beta of 1.53, confirming its high exposure to market volatility. The Fama-French Three-Factor Model adds further insight: Volkswagen is positively aligned with value stocks (HML = +0.48) and only slightly exposed to small-cap effects (SMB = +0.19), whereas Tesla is negatively aligned with value (HML = –0.72) and significantly influenced by small-cap dynamics (SMB = +0.68).
 
